@@ -1,11 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import EventBasic from './EventBasic'
+import StateBasic from './StateBasic'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-      <EventBasic type={"time"} />
-  </StrictMode>,
-)
+    <StateBasic init={0} />
+);
 
