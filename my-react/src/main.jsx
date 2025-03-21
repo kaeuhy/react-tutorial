@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import books from './books'
-import ForNest from "./ForNest"
+import ForFilter from "./ForFilter"
 
 createRoot(document.getElementById('root')).render(
-    <ForNest src={books} />
+    <ForFilter src={books} />
 );
 
