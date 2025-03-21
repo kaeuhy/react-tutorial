@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import StateBasic from './StateBasic'
+import books from './books'
+import ForList from "./ForList.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateBasic init={0} />
+    <ForList src={books} />
 );
 
