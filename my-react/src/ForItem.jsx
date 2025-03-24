@@ -1,4 +1,4 @@
-import Download from "./download.jsx";
+import Download from "./Download.jsx";
 
 export default function ForItem({ book }) {
     let dd;
