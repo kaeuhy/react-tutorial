@@ -9,6 +9,9 @@ import StyledPanel from "./StyledPanel.jsx";
 import TitledPanel from "./TitledPanel.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <TitledPanel title={title} body={body}></TitledPanel>,
+    <TitledPanel>
+        <p key="title">회원 모집 중!</p>
+        <p key="body">위키북스 프로젝트에 오신 것을 환영합니다!</p>
+    </TitledPanel>
 );
 
