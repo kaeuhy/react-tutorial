@@ -8,19 +8,10 @@ import {Form} from "./Form.jsx";
 import StyledPanel from "./StyledPanel.jsx";
 import TitledPanel from "./TitledPanel.jsx";
 import ListTemplate from "./ListTemplate";
+import MyHello from "./MyHello.jsx";
+import TypeProp from "./TypeProp.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <ListTemplate src={books}>
-        { elem => (
-            <>
-            <dt>
-                <a href={`https://wikibook.co.kr/images/cover/s/${elem.isbn}.jpg`}>
-                    {elem.title} ({elem.price}원)
-                </a>
-            </dt>
-                <dd>{elem.summary}</dd>
-            </>
-        )}
-    </ListTemplate>
+    <TypeProp prop1={new Member()} />
 );
 
