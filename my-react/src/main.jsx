@@ -12,6 +12,6 @@ import MyHello from "./MyHello.jsx";
 import TypeProp, {Member} from "./TypeProp.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <TypeProp prop4={[333, '홍길동']} />
+    <TypeProp prop5={{ '홍길동: 15', '이순신': '삼십' }} />
 );
 
