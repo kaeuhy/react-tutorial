@@ -12,6 +12,6 @@ import MyHello from "./MyHello.jsx";
 import TypeProp from "./TypeProp.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <TypeProp prop1={new Member()} />
+    <TypeProp prop2="foo" />
 );
 
