@@ -10,8 +10,10 @@ import TitledPanel from "./TitledPanel.jsx";
 import ListTemplate from "./ListTemplate";
 import MyHello from "./MyHello.jsx";
 import TypeProp, {Member} from "./TypeProp.jsx";
+import StateBasic from "./StateBasic.jsx";
+import StateParent from "./StateParent.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <TypeProp prop6={{ name: '홍길동', age: 35, sex: '남성', blood: 'A' }} />
+    <StateParent />
 );
 
