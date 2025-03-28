@@ -9,9 +9,9 @@ import StyledPanel from "./StyledPanel.jsx";
 import TitledPanel from "./TitledPanel.jsx";
 import ListTemplate from "./ListTemplate";
 import MyHello from "./MyHello.jsx";
-import TypeProp from "./TypeProp.jsx";
+import TypeProp, {Member} from "./TypeProp.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <TypeProp prop2="foo" />
+    <TypeProp prop3={new Member()} />
 );
 
