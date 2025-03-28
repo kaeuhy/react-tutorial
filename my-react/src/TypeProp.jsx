@@ -8,6 +8,7 @@ function TypeProp(props) {
 
 TypeProp.propTypes = {
     prop1: PropTypes.instanceOf(Member),
+    prop2: PropTypes.oneOf(['남성', '여성', '기타'])
 };
 
 export default TypeProp;
