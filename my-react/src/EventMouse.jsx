@@ -9,3 +9,4 @@ export default function EventMouse({ beforeSrc, afterSrc, alt }) {
              onMouseEnter={handleEnter} onMouseLeave={handleLeave} />
     );
 }
+
