@@ -12,8 +12,12 @@ import MyHello from "./MyHello.jsx";
 import TypeProp, {Member} from "./TypeProp.jsx";
 import StateBasic from "./StateBasic.jsx";
 import StateParent from "./StateParent.jsx";
+import EventMouse from "./EventMouse.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateParent />
+    <EventMouse
+    alt="로고 이미지"
+    beforeSrc="https://www.web-deli.com/image/linkbanner_l.gif"
+    afterSrc="https://www.web-deli.com/image/home_chara.gif" />
 );
 
