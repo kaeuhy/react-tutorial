@@ -6,14 +6,15 @@ export default function EventPropagation() {
     const handleChild = () => alert('#child run...');
 
     return (
-        <div id="parent" onClick={handleParent}>
+        <div id="parent" onClickCapture={handleParent}>
             부모 요소
-            <div id="my" onClick={handleMy}>
+            <div id="my" onClickCapture={handleMy}>
                 현재 요소
-                <a id="child" href="https://wikibook.co.kr/" onClick={handleChild}>
+                <a id="child" href="https://wikibook.co.kr/" onClickCapture={handleChild}>
                     자식 요소
                 </a>
             </div>
         </div>
     );
 }
+
