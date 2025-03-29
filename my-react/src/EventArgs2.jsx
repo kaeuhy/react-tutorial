@@ -1,5 +1,6 @@
 export default function EventArgs() {
-    const current = (e, type) => {
+    const current = e => {
+        const type = e.target.dataset.type;
         const d = new Date();
         switch(type) {
             case 'date':
@@ -15,9 +16,9 @@ export default function EventArgs() {
     };
     return (
         <div>
-            <button id="dt" onClick={e => current(e, 'datetime')}>현재 날짜 및 시각</button>
-            <button id="data" onClick={e => current(e, 'date')}>현재 날짜</button>
-            <button id="time" onClick={e => current(e, 'time')}>현재 시각</button>
+            <button id="dt" data-type="datetime" onClick={current}>현재 날짜 및 시각</button>
+            <button id="data" data-type="data" onClick={current}>현재 날짜</button>
+            <button id="time" data-type="time" onClick={current}>현재 시각</button>
         </div>
     );
 }
