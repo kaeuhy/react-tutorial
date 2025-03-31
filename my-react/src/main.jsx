@@ -22,8 +22,9 @@ import EventArgs from "./EventArgs.jsx";
 import EventArgs2 from "./EventArgs2.jsx";
 import EventPropagation from "./EventPropagation.jsx";
 import EventOnce from "./EventOnce.jsx";
+import EventPassive from "./EventPassive.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <EventOnce />
+    <EventPassive />
 );
 
