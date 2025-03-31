@@ -3,7 +3,10 @@ import './EventPropagation.css';
 export default function EventPropagation() {
     const handleParent = () => alert('#parent run...');
     const handleMy = () => alert('#my run...');
-    const handleChild = () => alert('#child run...');
+    const handleChild = e => {
+        e.stopPropagation();
+        alert('child run...');
+    }
 
     return (
         <div id="parent" onClickCapture={handleParent}>
