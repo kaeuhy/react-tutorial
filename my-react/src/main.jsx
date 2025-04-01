@@ -10,7 +10,7 @@ import TitledPanel from "./TitledPanel.jsx";
 import ListTemplate from "./ListTemplate";
 import MyHello from "./MyHello.jsx";
 import TypeProp, {Member} from "./TypeProp.jsx";
-import StateBasic from "./StateBasic.jsx";
+import StateBasic from "./StateBasic";
 import StateParent from "./StateParent.jsx";
 import EventMouse from "./EventMouse.jsx";
 import EventCompare from "./EventCompare.jsx";
@@ -23,8 +23,9 @@ import EventArgs2 from "./EventArgs2.jsx";
 import EventPropagation from "./EventPropagation.jsx";
 import EventOnce from "./EventOnce.jsx";
 import EventPassive from "./EventPassive.jsx";
+import StateForm from "./StateForm.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <EventPassive />
+    <StateForm />
 );
 
