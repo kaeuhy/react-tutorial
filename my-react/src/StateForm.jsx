@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function StateForm() {
-    const [state, setState] = useState({
+    const [form, setForm] = useState({
         name: '홍길동',
         age: 18
     });
