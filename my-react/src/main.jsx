@@ -31,8 +31,9 @@ import FormList from "./FormList.jsx";
 import FormRadio from "./FormRadio.jsx";
 import FormCheck from "./FormCheck.jsx";
 import FormCheckMulti from "./FormCheckMulti.jsx";
+import FormFile from "./FormFile.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <FormCheckMulti />
+    <FormFile />
 );
 
