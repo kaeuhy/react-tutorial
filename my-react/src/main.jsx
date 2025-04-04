@@ -26,8 +26,9 @@ import EventPassive from "./EventPassive.jsx";
 import StateForm from "./StateForm.jsx";
 import StateFormUC from "./StateFormUC.jsx";
 import FormTextarea from "./FormTextarea.jsx";
+import FormSelect from "./FormSelect.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <FormTextarea />
+    <FormSelect />
 );
 
