@@ -29,8 +29,9 @@ import FormTextarea from "./FormTextarea.jsx";
 import FormSelect from "./FormSelect.jsx";
 import FormList from "./FormList.jsx";
 import FormRadio from "./FormRadio.jsx";
+import FormCheck from "./FormCheck.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <FormRadio />
+    <FormCheck />
 );
 
