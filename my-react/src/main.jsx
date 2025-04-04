@@ -24,8 +24,9 @@ import EventPropagation from "./EventPropagation.jsx";
 import EventOnce from "./EventOnce.jsx";
 import EventPassive from "./EventPassive.jsx";
 import StateForm from "./StateForm.jsx";
+import StateFormUC from "./StateFormUC.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateForm />
+    <StateFormUC />
 );
 
