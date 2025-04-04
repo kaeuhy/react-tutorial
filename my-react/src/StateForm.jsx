@@ -22,7 +22,7 @@ export default function StateForm() {
             <div>
                 <label htmlFor="name">이름: </label>
                 <input id="name" name="name" type="text"
-                onChange={handleForm} value={form.name}/>
+                       onChange={handleForm} value={form.name}/>
             </div>
             <div>
                 <label htmlFor="age">나이:</label>
