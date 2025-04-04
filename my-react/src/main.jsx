@@ -28,8 +28,9 @@ import StateFormUC from "./StateFormUC.jsx";
 import FormTextarea from "./FormTextarea.jsx";
 import FormSelect from "./FormSelect.jsx";
 import FormList from "./FormList.jsx";
+import FormRadio from "./FormRadio.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <FormList />
+    <FormRadio />
 );
 
