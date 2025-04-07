@@ -34,8 +34,9 @@ import FormCheckMulti from "./FormCheckMulti.jsx";
 import FormFile from "./FormFile.jsx";
 import StateNest from "./StateNest.jsx";
 import StateNestImmer2 from "./StateNestImmer2.jsx";
+import StateTodo from "./StateTodo.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateNestImmer2/>
+    <StateTodo />
 );
 
