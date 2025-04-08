@@ -3,6 +3,7 @@ import './StateTodo.css';
 
 let maxId = 0;
 export default function StateTodo() {
+  const [desc, setDesc] = useState(true);
   const [title, setTitle] = useState('');
   const [todo, setTodo] = useState([]);
 
@@ -13,12 +14,12 @@ export default function StateTodo() {
   const handleClick = () => {
     setTodo([
       ...todo,
-        {
-            id: ++maxId,
-            title,
-            created: new Date(),
-            isDone: false
-        }
+      {
+        id: ++maxId,
+        title, // Todo 본체
+        created: new Date(),
+        isDone: false //
+      }
     ]);
   };
 
@@ -41,6 +42,19 @@ export default function StateTodo() {
     ));
   };
 
+  const handleSort = e => {
+    const sorted = [...todo];
+    sorted.sort((m, n) => {
+      if (desc) {
+        return n.created.getTime() - m.created.getTime();
+      } else {
+        return m.created.getTime() - n.created.getTime();
+      }
+    });
+    setDesc(d => !d);
+    setTodo(sorted);
+  };
+
   return (
     <div>
       <label>
@@ -50,9 +64,13 @@ export default function StateTodo() {
       </label>
       <button type="button"
         onClick={handleClick}>추가하기</button>
+      {/* desc 값에 따라 캡션 변경 */}
+      <button type="button"
+        onClick={handleSort}>
+         정렬({desc ? '↑' : '↓'})</button>
       <hr />
-      {/* 할 일을 목록으로 정리하기 */}
 
+      {/* 할 일을 목록으로 정리하기 */}
       <ul>
         {todo.map(item => (
           <li key={item.id}
