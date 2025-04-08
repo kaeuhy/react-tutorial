@@ -13,12 +13,12 @@ export default function StateTodo() {
   const handleClick = () => {
     setTodo([
       ...todo,
-      {
-        id: ++maxId,
-        title,
-        created: new Date(),
-        isDone: false
-      }
+        {
+            id: ++maxId,
+            title,
+            created: new Date(),
+            isDone: false
+        }
     ]);
   };
 
@@ -35,6 +35,12 @@ export default function StateTodo() {
     }));
   };
 
+  const handleRemove = e => {
+    setTodo(todo.filter(item =>
+      item.id !== Number(e.target.dataset.id)
+    ));
+  };
+
   return (
     <div>
       <label>
@@ -44,6 +50,7 @@ export default function StateTodo() {
       </label>
       <button type="button"
         onClick={handleClick}>추가하기</button>
+      <hr />
       {/* 할 일을 목록으로 정리하기 */}
 
       <ul>
@@ -53,6 +60,9 @@ export default function StateTodo() {
             {item.title}
             <button type="button"
               onClick={handleDone} data-id={item.id}>완료
+            </button>
+            <button type="button"
+              onClick={handleRemove} data-id={item.id}>삭제
             </button>
           </li>
         ))}
