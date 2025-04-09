@@ -2,24 +2,32 @@ import { useState } from 'react';
 import './StateTodo.css';
 
 let maxId = 0;
+const initialState = [
+  {id: 0, title: "React.js"},
+  {id: 1, title: "Next.js"}
+]
+
 export default function StateTodo() {
   const [desc, setDesc] = useState(true);
   const [title, setTitle] = useState('');
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState(initialState);
+
 
   const handleChangeTitle = e => {
     setTitle(e.target.value);
   };
 
   const handleClick = () => {
+
     setTodo([
-      ...todo,
+      ...todo.slice(0,1),
       {
         id: ++maxId,
-        title, // Todo 본체
+        title,
         created: new Date(),
-        isDone: false //
-      }
+        isDone: false
+      },
+      ...todo.slice(1)
     ]);
   };
 
@@ -55,6 +63,10 @@ export default function StateTodo() {
     setTodo(sorted);
   };
 
+  const handleRecover = e => {
+
+  }
+
   return (
     <div>
       <label>
@@ -78,6 +90,9 @@ export default function StateTodo() {
             {item.title}
             <button type="button"
               onClick={handleDone} data-id={item.id}>완료
+            </button>
+            <button type="button"
+                    onClick={handleRecover} data-id={item.id}>복구
             </button>
             <button type="button"
               onClick={handleRemove} data-id={item.id}>삭제

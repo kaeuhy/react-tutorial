@@ -38,6 +38,6 @@ import StateTodo from "./StateTodo.jsx";
 import StateNestImmer from "./StateNestImmer.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateNestImmer />
+    <StateTodo />
 );
 
