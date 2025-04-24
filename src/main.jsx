@@ -36,8 +36,9 @@ import StateNest from "./StateNest.jsx";
 import StateNestImmer2 from "./StateNestImmer2.jsx";
 import StateTodo from "./StateTodo.jsx";
 import StateNestImmer from "./StateNestImmer.jsx";
+import FormBasic from "./FormBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <StateTodo />
+    <FormBasic />
 );
 
