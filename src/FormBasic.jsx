@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 
 export default function FormBasic() {
+  // 기본값 준비
   const defaultValues = {
     name: '홍길동',
     email: 'admin@example.com',
@@ -8,12 +9,21 @@ export default function FormBasic() {
     memo: ''
   };
 
+  // 폼 초기화
   const { register, handleSubmit,
-    formState: { errors, isDirty, isValid } } = useForm({
+    formState: { errors, isDirty, isValid, isSubmitting } } = useForm({
     defaultValues
   });
 
-  const onsubmit = data => console.log(data);
+  // 제출 시 4000밀리초로 처리(더미 지연 처리)
+  const onsubmit = data => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+        console.log(data);
+      }, 4000);
+    });
+  };
   const onerror = err => console.log(err);
 
   return (
@@ -87,7 +97,8 @@ export default function FormBasic() {
     </div>
     <div>
       <button type="submit"
-         disabled={!isDirty || !isValid}>제출하기</button>
+         disabled={!isDirty || !isValid || isSubmitting}>제출하기</button>
+         {isSubmitting && <div>...제출 중...</div>}
     </div>
   </form>
   );
