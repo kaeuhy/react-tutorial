@@ -38,8 +38,9 @@ import StateTodo from "./StateTodo.jsx";
 import StateNestImmer from "./StateNestImmer.jsx";
 import FormBasic from "./FormBasic.jsx";
 import FormYup from "./FormYup.jsx";
+import LazyBasic from "./LazyBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <FormYup />
+    <LazyBasic />
 );
 
