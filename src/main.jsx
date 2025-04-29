@@ -40,8 +40,9 @@ import FormBasic from "./FormBasic.jsx";
 import FormYup from "./FormYup.jsx";
 import LazyBasic from "./LazyBasic.jsx";
 import SuspenseResult from "./SuspenseResult.jsx";
+import ProfilerBasic from "./ProfilerBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <SuspenseResult />
+    <ProfilerBasic />
 );
 
