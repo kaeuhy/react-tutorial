@@ -39,8 +39,9 @@ import StateNestImmer from "./StateNestImmer.jsx";
 import FormBasic from "./FormBasic.jsx";
 import FormYup from "./FormYup.jsx";
 import LazyBasic from "./LazyBasic.jsx";
+import SuspenseResult from "./SuspenseResult.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <LazyBasic />
+    <SuspenseResult />
 );
 
