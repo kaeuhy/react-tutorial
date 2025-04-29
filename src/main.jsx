@@ -41,8 +41,9 @@ import FormYup from "./FormYup.jsx";
 import LazyBasic from "./LazyBasic.jsx";
 import SuspenseResult from "./SuspenseResult.jsx";
 import ProfilerBasic from "./ProfilerBasic.jsx";
+import NestingSuspense from "./NestingSuspense.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <ProfilerBasic />
+    <NestingSuspense />
 );
 
