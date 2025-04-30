@@ -43,10 +43,11 @@ import SuspenseResult from "./SuspenseResult.jsx";
 import ProfilerBasic from "./ProfilerBasic.jsx";
 import NestingSuspense from "./NestingSuspense.jsx";
 import StyledBasic from "./StyledBasic.jsx";
+import StyledGlobalBasic from "./StyledGlobalBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-    <StyledBasic />
+    <StyledGlobalBasic />
     </div>
 );
 
