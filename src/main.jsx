@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './global.css'
+// import './global.css'
 import books from './books'
 import ForFilter from "./ForFilter"
 import SelectStyle from './SelectStyle';
@@ -45,11 +45,12 @@ import NestingSuspense from "./NestingSuspense.jsx";
 import StyledBasic from "./StyledBasic.jsx";
 import StyledGlobalBasic from "./StyledGlobalBasic.jsx";
 import StyledCss from "./StyledCss.jsx";
+import StyledDynamic from "./StyledDynamic.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <div className="centered">
-        <h3>Styled JSX의 외부화</h3>
-        <StyledCss />
-    </div>
+    <StyledDynamic theme={{
+        radius: true,
+        color: 'royalblue'
+    }} />
 );
 
