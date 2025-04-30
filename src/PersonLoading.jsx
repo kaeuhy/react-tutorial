@@ -6,8 +6,6 @@ const LazyPerson = lazy(()=> import('./LazyPerson.jsx'));
 
 export default function LazyLoading() {
     return (
-        <Suspense>
             <LazyPerson />
-        </Suspense>
     );
 }

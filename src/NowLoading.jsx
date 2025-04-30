@@ -6,8 +6,6 @@ const LazyTitle = lazy(()=> import('./LazyTitle.jsx'));
 
 export default function LazyLoading() {
     return (
-        <Suspense>
         <LazyTitle />
-        </Suspense>
     );
 }
