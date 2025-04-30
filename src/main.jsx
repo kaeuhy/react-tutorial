@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import './global.css'
 import books from './books'
 import ForFilter from "./ForFilter"
 import SelectStyle from './SelectStyle';
@@ -42,8 +42,11 @@ import LazyBasic from "./LazyBasic.jsx";
 import SuspenseResult from "./SuspenseResult.jsx";
 import ProfilerBasic from "./ProfilerBasic.jsx";
 import NestingSuspense from "./NestingSuspense.jsx";
+import StyledBasic from "./StyledBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
-    <NestingSuspense />
+    <div className="centered">
+    <StyledBasic />
+    </div>
 );
 
