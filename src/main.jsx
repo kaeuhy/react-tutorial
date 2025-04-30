@@ -48,7 +48,8 @@ import StyledCss from "./StyledCss.jsx";
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-    <StyledCss />
+        <h3>Styled JSX의 외부화</h3>
+        <StyledCss />
     </div>
 );
 
