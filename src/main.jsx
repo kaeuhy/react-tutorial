@@ -47,10 +47,13 @@ import StyledGlobalBasic from "./StyledGlobalBasic.jsx";
 import StyledCss from "./StyledCss.jsx";
 import StyledDynamic from "./StyledDynamic.jsx";
 import StyledComp from "./StyledComp.jsx";
+import {MyButton, MyStyledButton} from "./StyledComp2.jsx";
+import StyledCommon from "./StyledCommon.jsx";
+import StyledProps from "./StyledProps.jsx";
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-        <StyledComp />
+        <StyledProps />
     </div>
 );
 
