@@ -53,17 +53,12 @@ import StyledProps from "./StyledProps.jsx";
 import EmotionComp from "./EmotionComp.jsx";
 import EmotionJsx from "./EmotionJsx.jsx";
 import { css, Global } from '@emotion/react';
-
-const global = css`
-    body {
-        background-color: Yellow;
-    }
-`;
+import PortalBasic from "./PortalBasic.jsx";
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-        <Global styles={global} />
-        <EmotionJsx />
+        <div id="dialog"></div>
+        <PortalBasic />
     </div>
 );
 
