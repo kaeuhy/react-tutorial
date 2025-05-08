@@ -50,12 +50,20 @@ import StyledComp from "./StyledComp.jsx";
 import {MyButton, MyStyledButton} from "./StyledComp2.jsx";
 import StyledCommon from "./StyledCommon.jsx";
 import StyledProps from "./StyledProps.jsx";
-import EmotionJsx from "./EmotionJsx.jsx";
 import EmotionComp from "./EmotionComp.jsx";
+import EmotionJsx from "./EmotionJsx.jsx";
+import { css, Global } from '@emotion/react';
+
+const global = css`
+    body {
+        background-color: Yellow;
+    }
+`;
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-        <EmotionComp gi/>
+        <Global styles={global} />
+        <EmotionJsx />
     </div>
 );
 
