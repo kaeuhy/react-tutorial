@@ -1,8 +1,7 @@
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorRetryThrow from "./ErrorRetryThrow";
-import ErrorFallback from "./ErrorFallback.jsx";
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorEvent from './ErrorEvent';
 
-export default function ErrorRetryRoot() {
+export default function ErrorEventRoot() {
     const handleFallback = ({ error, resetErrorBoundary }) => {
         const handleClick = () => resetErrorBoundary();
         return (
@@ -15,19 +14,15 @@ export default function ErrorRetryRoot() {
             </div>
         );
     };
-
     const handleReset = () => console.log('Retry!!');
-
     return (
-        <div>
+        <>
             <h3>Error Boundary의 기본</h3>
             <ErrorBoundary
                 onReset={handleReset}
-                fallbackRender={handleFallback}
-                FallbackComponent={ErrorFallback}
-                >
-                <ErrorRetryThrow />
+                fallbackRender={handleFallback}>
+                <ErrorEvent />
             </ErrorBoundary>
-        </div>
+        </>
     );
 }
