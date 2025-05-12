@@ -55,10 +55,11 @@ import EmotionJsx from "./EmotionJsx.jsx";
 import { css, Global } from '@emotion/react';
 import PortalBasic from "./PortalBasic.jsx";
 import ErrorRoot from "./ErrorRoot.jsx";
+import ErrorRetryRoot from "./ErrorRetryRoot.jsx";
 
 createRoot(document.getElementById('root')).render(
     <div className="centered">
-        <ErrorRoot />
+        <ErrorRetryRoot />
     </div>
 );
 
