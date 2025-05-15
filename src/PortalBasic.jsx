@@ -19,7 +19,7 @@ export default function PortalBasic() {
                         닫기
                     </button>
                 </div>,
-                document.getElementById('dialog')
+                document.getElementById('dialog2')
             )}
         </form>
     );
