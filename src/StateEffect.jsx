@@ -12,7 +12,7 @@ export default function StateEffect({ init }) {
     return (
         <>
             <button onClick={() => setFoo(Date.now())}>Foo ({foo})</button>
-            <button onClick={handleClick}>카운트</button>
+            <button onClick={handleClick}>카운트</button>v
             <p>{count}번 클릭되었습니다.</p>
         </>
     );
