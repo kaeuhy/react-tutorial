@@ -4,11 +4,12 @@ import PortalExample from "./PortalExample.jsx";
 import NoPortalExample from "./NoPortalExample.jsx";
 import StateEffect from "./StateEffect.jsx";
 import HookTimer from "./HookTimer.jsx";
+import HookEffect from "./HookEffect.jsx";
 
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <HookTimer init={0} />
+            <HookEffect init={10} />
         </div>
     </>
 );
