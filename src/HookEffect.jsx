@@ -10,12 +10,12 @@ const sleep = delay => {
 export default function HookEffect({ init }) {
     const [count, setCount] = useState(0);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         sleep(2000);
         setCount(init);
     }, []);
 
-    const handleClick = () => {
+    const handleClick = () => {C
         setCount(c => c + 1);
     };
 
