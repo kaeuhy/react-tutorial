@@ -5,11 +5,12 @@ import NoPortalExample from "./NoPortalExample.jsx";
 import StateEffect from "./StateEffect.jsx";
 import HookTimer from "./HookTimer.jsx";
 import HookEffect from "./HookEffect.jsx";
+import HookRefNg from "./HookRefNg.jsx";
 
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <HookEffect init={10} />
+            <HookRefNg />
         </div>
     </>
 );
