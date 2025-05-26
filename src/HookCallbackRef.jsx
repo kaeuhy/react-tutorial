@@ -3,13 +3,14 @@ import { useEffect, useRef, useState } from "react";
 export default function HookCallbackRef() {
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
-    const address = useRef(null);
+    // const address = useRef(null);
+    const callbackRef = elem => elem?.focus();
 
-    useEffect(() => {
-        if (address.current) {
-            address.current.focus();
-        }
-    }, [show]);
+    // useEffect(() => {
+    //     if (address.current) {
+    //         address.current.focus();
+    //     }
+    // }, [show]);
 
     return (
         <>
@@ -25,7 +26,7 @@ export default function HookCallbackRef() {
             {show &&
                 <div>
                     <label htmlFor="address">주소:</label>
-                <input id="address" type="text" ref={address} />
+                <input id="address" type="text" ref={callbackRef} />
                 </div>
             }
         </>
