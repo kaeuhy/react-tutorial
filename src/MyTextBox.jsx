@@ -14,7 +14,7 @@ const MyTextBox = forwardRef(({ label }, ref) => {
     return (
         <label>
             {label} :
-            <input type="text" size="15" ref={inpurt} />
+            <input type="text" size="15" ref={input} />
         </label>
     );
 });
