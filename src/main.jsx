@@ -5,11 +5,15 @@ import HookReducer from "./HookReducer.jsx";
 import HookReducerUp from "./HookReducerUp.jsx";
 import HookReducerInit from "./HookReducerInit.jsx";
 import HookContext from "./HookContext.jsx";
+import MyThemeProvider from "./MyThemeProvider.jsx";
+import HookThemeButton from "./HookThemeButton.jsx";
 
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <HookReducerInit />
+            <MyThemeProvider>
+                <HookThemeButton />
+            </MyThemeProvider>
         </div>
     </>
 );
