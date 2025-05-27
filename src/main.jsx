@@ -9,7 +9,7 @@ import HookContext from "./HookContext.jsx";
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <HookContext />
+            <HookReducerInit />
         </div>
     </>
 );

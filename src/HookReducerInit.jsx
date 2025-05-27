@@ -17,7 +17,8 @@ export default function HookReducerInit({ init }) {
                     return state;
             }
         },
-        initCounter(init)
+        init,
+        initCounter
     );
 
     const handleClick = () => {
