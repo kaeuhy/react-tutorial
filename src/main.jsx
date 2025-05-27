@@ -5,8 +5,8 @@ import HookReducer from "./HookReducer.jsx";
 import HookReducerUp from "./HookReducerUp.jsx";
 import HookReducerInit from "./HookReducerInit.jsx";
 import HookContext from "./HookContext.jsx";
-import MyThemeProvider from "./MyThemeProvider.jsx";
 import HookThemeButton from "./HookThemeButton.jsx";
+import MyThemeProvider from "./MyThemeProvider.jsx";
 
 createRoot(document.getElementById('root')).render(
     <>
