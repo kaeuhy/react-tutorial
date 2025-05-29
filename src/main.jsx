@@ -7,13 +7,15 @@ import HookReducerInit from "./HookReducerInit.jsx";
 import HookContext from "./HookContext.jsx";
 import HookThemeButton from "./HookThemeButton.jsx";
 import MyThemeProvider from "./MyThemeProvider.jsx";
+import RecoilCounter from "./RecoilCounter.jsx";
+import {RecoilRoot} from "recoil";
 
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <MyThemeProvider>
-                <HookThemeButton />
-            </MyThemeProvider>
+            <RecoilRoot>
+                <RecoilCounter />
+            </RecoilRoot>
         </div>
     </>
 );
