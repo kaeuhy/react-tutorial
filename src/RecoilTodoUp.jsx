@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil';
 import { useState } from 'react';
-import { idsAtom, todoListSelector } from '../store/atomUp';
-import '../chap04/StateTodo.css';
+import { idsAtom, todoListSelector } from './store/atomUp.jsx';
+import './StateTodo.css';
 
 export default function RecoilTodoUp() {
     const [title, setTitle] = useState('');
