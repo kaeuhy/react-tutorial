@@ -11,8 +11,8 @@ export default function HookMemo() {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   // MyButton에 넘겨주는 핸들러
-  const increment = () => setCount1(c => c + 1);
-  const decrement = () => setCount2(c => c - 1);
+  const increment = useCallback(() => setCount1(c => c + 1), []);
+  const decrement = useCallback(() => setCount2(c => c - 1), []);
 
   // count1에 100을 더한 값을 계산하는 코드 (더미 헤비 처리)
   const heavyProcess = useMemo(() => {
