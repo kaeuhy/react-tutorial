@@ -1,4 +1,4 @@
-import useCounter from './UseCounter';
+import useCounter from './UseCounter.jsx';
 
 export default function HookCustom() {
     const [state, handleUp, handleDown, handleReset] = useCounter(0, 1);
