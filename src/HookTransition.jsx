@@ -4,15 +4,16 @@ import commentList from './comments';
 import { BookDetails, CommentList } from './HookTransitionChild';
 
 export default function HookTransition() {
-  // 선택한 도서(isbn)와 해당 코멘트(comments)
   const [isbn, setIsbn] = useState('');
   const [comments, setComments] = useState([]);
+  const [isPending, startTransition] = useTransition();
 
-  // 선택 상자 변경에 따른 State 반영
   const handleChange = e => {
     const isbn = e.target.value;
     setIsbn(isbn);
-    setComments(commentList.filter(c => c.isbn === isbn));
+    startTransition(() => {
+      setComments(commentList.filter(c => c.isbn === isbn));
+    });
   };
 
   return (
