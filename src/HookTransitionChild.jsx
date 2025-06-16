@@ -1,8 +1,6 @@
 import { memo } from 'react';
 import books from './books';
 
-
-// delay 밀리초만큼 처리를 지연시키는 코드
 const sleep = (delay) => {
     const start = Date.now();
     while (Date.now() - start < delay);
@@ -22,9 +20,7 @@ export function BookDetails({ isbn }) {
 }
 
 export const CommentList = memo(function({ src, isPending }){
-    // isPending이 true인 경우 로딩 메시지 표시 (7-7-3 절에서 사용)
     if (isPending) return <p>Now Loading...</p>;
-    // 수신된 댓글 정보 목록 표시
     return (
         <ol>
             {src.map(c => <CommentItem key={c.id} src={c} />)}
@@ -32,7 +28,6 @@ export const CommentList = memo(function({ src, isPending }){
     );
 });
 
-// 개별 코멘트 표시로 시간이 오래 걸리는 처리 시뮬레이션
 function CommentItem({ src }) {
     sleep(1000);
     return <li>{src.body}({src.rank})</li>;
