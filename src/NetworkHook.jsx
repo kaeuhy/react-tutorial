@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
-function NetworkStatus() {
-    const [isOnline, setIsOnline] = useState(true);
+export default function NetworkHook() {
+    const [state, setOnline] = useState(true);
 
     useEffect(() => {
-        const handleOnline = () => {
-            setIsOnline(true);
+        const online = () => {
+            setState(true);
         };
 
-        const handleOffline = () => {
-            setIsOnline(false);
+        const offline = () => {
+            setState(false);
         };
 
-        window.addEventListener('online', handleOnline);
-        window.addEventListener('offline', handleOffline);
+        window.addEventListener('online', online);
+        window.addEventListener('offline', offline);
 
         return () => {
-            window.removeEventListener('online', handleOnline);
-            window.removeEventListener('offline', handleOffline);
+            window.removeEventListener('online', online);
+            window.removeEventListener('offline', offline);
         };
     }, []);
 
     return (
         <div>
-            <p>{isOnline ? '온라인' : '오프라인'}</p>
+            <p>현재 상태 : {state ? '온라인' : '오프라인'}</p>
         </div>
     );
-}
-
-export default NetworkStatus;
+};
