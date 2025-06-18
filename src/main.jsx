@@ -11,9 +11,7 @@ import AboutPage from "./AboutPage.jsx";
 createRoot(document.getElementById('root')).render(
     <>
         <div className="centered">
-            <Route path="/" element={<TopPage />} />
-            <Route path="/article" element={<ArticlePage />} />
-            <Route path="/about" element={<AboutPage />} />
+            <RouterProvider router={routesBasic} />
         </div>
     </>
 );
