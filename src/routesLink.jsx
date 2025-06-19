@@ -7,8 +7,8 @@ import AboutPage from "./AboutPage.jsx";
 
 const routesLink = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<RouterApp />}>
-            <Route index element={<TopPage />} />
+        <Route element={<RouterApp />}>
+            <Route path="/" element={<TopPage />} />
             <Route path="article" element={<ArticlePage />} />
             <Route path="about" element={<AboutPage />} />
         </Route>
