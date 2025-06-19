@@ -13,4 +13,4 @@ const routesBasic = createBrowserRouter(
   )
 );
 
-export default routesBasic;
+export default routesBasic; 
