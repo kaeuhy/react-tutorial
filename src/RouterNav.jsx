@@ -1,6 +1,9 @@
 import {NavLink, Outlet} from "react-router-dom";
 
-const isCurrent = ({ isActive, isPending }) => isActive ? 'active' : '';
+const isCurrent = ({ isActive }) => isActive ? {
+    color: 'Red;,
+    fontWeight: 'bold'
+} : {};
 
 
 export default function RouterNav() {
