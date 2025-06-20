@@ -1,7 +1,16 @@
 import { useParams } from 'react-router-dom';
+import MyHeader from './MyHeader';
+import books from './books.jsx';
 
 export default function BookPage() {
-  // 경로 매개변수 가져오기
-  const { isbn = '979-1-1583-9517-9' } = useParams();
-  return <p>ISBN 코드 {isbn}의 페이지입니다. </p>;
+  const { isbn = '9791158395179' } = useParams();
+  const { title, summary } = books.find(b => isbn === b.isbn);
+
+  return (
+    <>
+    <MyHeader title={title} keywords={title}
+      description={summary} />
+    <p>ISBN 코드 {isbn}의 페이지입니다. </p>
+    </>
+  );
 }
