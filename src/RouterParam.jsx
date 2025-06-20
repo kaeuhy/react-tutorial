@@ -11,6 +11,7 @@ export default function RouterParam() {
         <li><NavLink to="/book/979-1-1583-9518-6">
           OpenAI API와 파이썬으로 나만의 챗GPT 만들기</NavLink></li>
         <li><NavLink to="/book" end>기본 도서</NavLink></li>
+        <li><NavLink to="/search/react/router/remix">검색 결과</NavLink></li>
       </ul>
       <hr />
       <Outlet />
