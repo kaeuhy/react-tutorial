@@ -5,6 +5,7 @@ import BookPage from './BookPage';
 import SearchPage from './SearchPage';
 import NotFoundPage from './NotFoundPage';
 import BookQueryPage from './BookQueryPage';
+import BookStatePage from './BookStatePage';
 
 const routesParam = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const routesParam = createBrowserRouter(
       <Route path="/" element={<TopPage />} />
       <Route path="/book/:isbn?" element={<BookPage />} />
       <Route path="/bookQuery" element={<BookQueryPage />} />
+      <Route path="/bookState" element={<BookStatePage />} />
       {/* 가변 길이 매개변수 정의 */}
       <Route path="/search/*" element={<SearchPage />} />
       {/* 임의의 페이지에 해당하는 루트 */}
