@@ -12,6 +12,7 @@ export default function RouterParam() {
           OpenAI API와 파이썬으로 나만의 챗GPT 만들기</NavLink></li>
         <li><NavLink to="/book" end>기본 도서</NavLink></li>
         <li><NavLink to="/search/react/router/remix">검색 결과</NavLink></li>
+          <li><NavLink to="/nothing/foo/bar">존재하지 않는 페이지</NavLink></li>
       </ul>
       <hr />
       <Outlet />
