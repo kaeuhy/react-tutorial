@@ -20,10 +20,10 @@ export default function RouterParam() {
           디자인을 위한 미드저니 완벽 활용법(State 버전)</NavLink></li>
         <li><NavLink to="/book" end>기본 도서</NavLink></li>
         <li><NavLink to="/search/react/router/remix">검색 결과</NavLink></li>
+        <li><NavLink to="/weather/Seoul">서울 날씨</NavLink></li>
         <li><NavLink to="/nothing/foo/bar">존재하지 않는 페이지</NavLink></li>
       </ul>
       <hr />
-      {/* 컨텍스트에 count/setCount를 삽입 */}
       <Outlet context={[count, setCount]} />
     </>
   );
