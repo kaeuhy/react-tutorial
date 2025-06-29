@@ -67,8 +67,8 @@ React 학습을 위한 모던 실전 스터디 기록입니다.
 - 라우팅과 관련된 기타 기법
 
 ## 따로 스터디한 내용들
-[원시타입과 참조타입의 동작방식](https://general-biplane-e1e.notion.site/Week-11-218d858c2baa8025ad62e2c94549294a?source=copy_link)
-</br>
 [Closure](https://general-biplane-e1e.notion.site/Closure-1c2d858c2baa803dba39d6ad332587e1?source=copy_link)
+</br>
+[원시타입과 참조타입의 동작방식](https://general-biplane-e1e.notion.site/Week-11-218d858c2baa8025ad62e2c94549294a?source=copy_link)
 </br>
 [절차, 객체, 함수 지향 프로그래밍](https://general-biplane-e1e.notion.site/1c2d858c2baa804087a0ce28a8557374?source=copy_link)
