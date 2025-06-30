@@ -1,4 +1,4 @@
-# Modern React Study - 완료
+# Modern React Study
 
 React 학습을 위한 모던 실전 스터디 기록입니다.  
 기초부터 컴포넌트 설계, 상태관리, 폼 처리, 커스텀 훅, 라우팅까지 단계적으로 학습한 내용을 정리했습니다.
