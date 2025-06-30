@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigation } from 'react-router-dom';
 import './RouterNav.css';
 
 export default function RouterParam() {
   const [count, setCount] = useState(0);
+
+  const navigation = useNavigation();
 
   return (
     <>
       <p>접속자 수:{count}</p>
       <ul>
         <li><NavLink to="/">홈</NavLink></li>
+        <li><NavLink to="/book/form">도서 등록 양식</NavLink></li>
         <li><NavLink to="/book/979-1-1583-9517-9">
           시작하세요! C# 12 프로그래밍</NavLink></li>
         <li><NavLink to="/book/979-1-1583-9518-6">

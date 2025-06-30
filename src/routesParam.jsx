@@ -6,7 +6,7 @@ import SearchPage from './SearchPage';
 import NotFoundPage from './NotFoundPage';
 import BookQueryPage from './BookQueryPage';
 import BookStatePage from './BookStatePage';
-import InvalidParamsPage from './InvalidParamsPage';
+import InvalidParamsPage from './InvalidParamsPage.jsx';
 import WeatherPage from './WeatherPage';
 import CommonErrorPage from './CommonErrorPage';
 import BookFormPage from './BookFormPage';
