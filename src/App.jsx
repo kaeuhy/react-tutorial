@@ -1,10 +1,10 @@
 import "./App.css";
-import Register from "./components/Register.jsx";
+import HookExam from "./components/HookExam.jsx";
 
 export default function App() {
   return (
     <>
-      <Register />
+      <HookExam />
     </>
   );
 }
