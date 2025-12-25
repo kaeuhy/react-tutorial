@@ -1,15 +1,29 @@
 import "./App.css";
 import Viewer from "./componets/Viewer.jsx";
 import Controller from "./componets/Controller.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Even from "./componets/Even.jsx";
 
 export default function App() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState("");
 
+  const isMount = useRef(false);
+
+  // mount
   useEffect(()=>{
-    console.log(`count: ${count} | input: ${input}`);
-  }, [count, input]);
+    console.log("mount");
+  }, []);
+
+  // update
+  useEffect(()=>{
+    if(!isMount.current) {
+      isMount.current = true;
+      return
+    }
+    console.log("update")
+  });
+
 
   const onClickButton = (value) => {
     setCount(count + value);
@@ -25,6 +39,7 @@ export default function App() {
       </section>
       <section>
         <Viewer count={count} />
+        {count % 2 === 0 ? <Even /> : null}
       </section>
       <section>
         <Controller onClickButton={onClickButton} />
