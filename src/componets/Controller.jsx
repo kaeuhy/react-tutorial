@@ -1,4 +1,4 @@
-export default function Controller({onClickButton}) {
+export default function Controller({ onClickButton }) {
   return (
     <div>
       <button
