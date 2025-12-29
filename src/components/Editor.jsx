@@ -26,7 +26,7 @@ export default function Editor({ onCreate }) {
 
   return <div className="Editor">
     <input ref={contentRef} value={content} onKeyDown={onkeyDown} onChange={onChangeContent}
-           placeholder="새로운 Todo..." />
+           placeholder="깡지의 할 일을 추가하세요" />
     <button onClick={onSubmit}>
       추가
     </button>

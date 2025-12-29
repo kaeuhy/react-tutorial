@@ -1,4 +1,4 @@
-export const mockDate = [
+export const mockData = [
   {
     id: 0,
     isDone: false,
