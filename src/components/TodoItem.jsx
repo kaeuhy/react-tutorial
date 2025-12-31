@@ -1,13 +1,14 @@
 import "./../css/TodoItem.css";
+import { memo } from "react";
 
-export default function TodoItem({ id, isDone, content, date, onUpdate, onDelete }) {
+function TodoItem({ id, isDone, content, date, onUpdate, onDelete }) {
   const onChangeCheckbox = () => {
     onUpdate(id);
   };
 
   const onClickDeleteButton = () => {
     onDelete(id);
-  }
+  };
 
   return (
     <div className="TodoItem">
@@ -18,3 +19,12 @@ export default function TodoItem({ id, isDone, content, date, onUpdate, onDelete
     </div>
   );
 }
+
+export default memo(TodoItem, (prevProps, nextProps) => {
+  if (prevProps.id !== nextProps.id) return false;
+  if (prevProps.isDone !== nextProps.isDone) return false;
+  if (prevProps.content !== nextProps.content) return false;
+  if (prevProps.date !== nextProps.date) return false;
+
+  return true;
+});
