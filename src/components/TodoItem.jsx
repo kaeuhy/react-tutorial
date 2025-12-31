@@ -1,7 +1,10 @@
 import "./../css/TodoItem.css";
-import { memo } from "react";
+import { memo, useContext } from "react";
+import { TodoContext } from "../App.jsx";
 
-function TodoItem({ id, isDone, content, date, onUpdate, onDelete }) {
+function TodoItem({ id, isDone, content, date }) {
+  const { onUpdate, onDelete } =
+    useContext(TodoContext);
   const onChangeCheckbox = () => {
     onUpdate(id);
   };
@@ -12,7 +15,12 @@ function TodoItem({ id, isDone, content, date, onUpdate, onDelete }) {
 
   return (
     <div className="TodoItem">
-      <input onChange={onChangeCheckbox} readOnly checked={isDone} type="checkbox" />
+      <input
+        onChange={onChangeCheckbox}
+        readOnly
+        checked={isDone}
+        type="checkbox"
+      />
       <div className="content">{content}</div>
       <div className="date">{new Date(date).toLocaleDateString()}</div>
       <button onClick={onClickDeleteButton}>삭제</button>
