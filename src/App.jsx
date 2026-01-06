@@ -64,28 +64,6 @@ export default function App() {
 
   return (
     <>
-      <button
-        onClick={() => {
-          onCreate(new Date().getTime(), 1, "Hello");
-        }}
-      >
-        버튼 추가 테스트
-      </button>
-      <button
-        onClick={() => {
-          onUpdate(1, new Date().getTime(), 3, "수정된 일기입니다");
-        }}
-      >
-        버튼 수정 테스트
-      </button>
-      <button
-        onClick={() => {
-          onDelete(1);
-        }}
-      >
-        버튼 삭제 테스트
-      </button>
-
       <DiaryStateContext value={data}>
         <DiaryDispatchContext.Provider value={{
           onCreate,
