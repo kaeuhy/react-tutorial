@@ -4,18 +4,13 @@ import Home from "./pages/Home";
 import Diary from "./pages/Diary";
 import New from "./pages/New";
 import Notfound from "./pages/Notfound.jsx";
-import { getEmotionImage } from "./util/get-emotion-image.jsx";
+import Button from "./components/Button/Button.jsx";
+import Header from "./components/Header/Header.jsx";
 
 export default function App() {
   return (
     <>
-      <div>
-        <img src={getEmotionImage(1)} />
-        <img src={getEmotionImage(2)} />
-        <img src={getEmotionImage(3)} />
-        <img src={getEmotionImage(4)} />
-        <img src={getEmotionImage(5)} />
-      </div>
+      <Header title={"Header"} leftChild={<Button text="left" />} rightChild={<Button text="right" />} />
 
       <Routes>
         <Route path="/" element={<Home />} />
